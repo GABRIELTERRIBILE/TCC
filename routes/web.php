@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/produtos', [App\Http\Controllers\ProdutosController::class, 'index'])->name('produtos');
 Route::get('/demandas', [App\Http\Controllers\DemandaController::class, 'index'])->name('Demanda');
 Route::post('/cadastra-produto', [\App\Http\Controllers\ProdutosController::class, 'store'] );
+Route::get('/fornecedores', [App\Http\Controllers\FornecedoresController::class, 'index'])->name('fornecedores');
+Route::get('/fornecedores/criar',[App\Http\Controllers\FornecedoresController::class, 'create']);
+Route::post('/fornecedores/criar', [App\Http\Controllers\FornecedoresController::class, 'store']);
