@@ -3,20 +3,21 @@
 
 namespace App\Http\Controllers;
 
-use App\fornecedores;
+use App\Fornecedores;
+use App\Http\Requests\FornecedorFormRequest;
 use Illuminate\Http\Request;
 
 
 class FornecedoresController extends Controller
 {
-    public function index() {
-        $fornecedores = [
-            'SICOOB',
-            'CEQ RENTAL',
-            'IACC PRÉ MOLDADOS E CONSTRUÇÕES'
-        ];
+    public function index(Request $request) {
+        $fornecedores = Fornecedores::query()
+                ->orderBy('nome')
+                ->get();
+        $mensagem = $request->session()->get('mensagem');
 
-        return view('fornecedores.index', compact('fornecedores'));
+
+        return view('fornecedores.index', compact('fornecedores', 'mensagem'));
     }
 
     public function create()
@@ -24,12 +25,34 @@ class FornecedoresController extends Controller
         return view('fornecedores.create');
     }
 
-    public function store(Request $request)
+    public function store(FornecedorFormRequest $request)
+    {
+//        dd($request->all());
+        $fornecedores = fornecedores::create($request->all());
+        $request->session()
+            ->flash(
+                'mensagem',
+                "Fornecedor {$fornecedores->nome} cadastrado com sucesso "
+            );
+
+
+        return redirect('/fornecedores');
+    }
+
+    public function destroy (Request $request)
+
     {
 
-        $nome = $request->nome;
-        $fornecedores = new fornecedores();
-        $fornecedores->nome = $nome;
-        var_dump($fornecedores->save());
+        Fornecedores::destroy($request->id);
+        $request->session()
+            ->flash(
+                'mensagem',
+                "Fornecedor removido com sucesso"
+            );
+
+        return redirect('/fornecedores');
+
     }
 }
+
+;

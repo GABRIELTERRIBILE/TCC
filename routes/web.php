@@ -26,3 +26,4 @@ Route::post('/cadastra-produto', [\App\Http\Controllers\ProdutosController::clas
 Route::get('/fornecedores', [App\Http\Controllers\FornecedoresController::class, 'index'])->name('fornecedores');
 Route::get('/fornecedores/criar',[App\Http\Controllers\FornecedoresController::class, 'create']);
 Route::post('/fornecedores/criar', [App\Http\Controllers\FornecedoresController::class, 'store']);
+Route::delete('/fornecedores/{id}',[App\Http\Controllers\FornecedoresController::class, 'destroy']);
