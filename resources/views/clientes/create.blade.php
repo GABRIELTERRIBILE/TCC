@@ -1,6 +1,6 @@
 @extends('layout')
 @section('cabecalho')
-    Adicionar Fornecedores
+    Adicionar Cliente
 @endsection
 
 @section('conteudo')
@@ -15,7 +15,7 @@
         </div>
     @endif
 
-    <form action="/fornecedores/criar" method="post">
+    <form action="/clientes/criar" method="post">
         @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
@@ -28,8 +28,8 @@
                 <input type="email" class="form-control" name="email" id="email" placeholder="Email">
             </div>
             <div class="form-group col-md-6">
-                <label for="Telefone">Telefone</label>
-                <input type="text" class="form-control" name="telefone" id="Telefone" placeholder="Telefone">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control" name="telefone" id="telefone" placeholder="telefone">
             </div>
         </div>
 
@@ -37,9 +37,15 @@
             <label for="Endereço">Endereço</label>
             <input type="text" class="form-control" name="endereco" id="Endereco" placeholder="Rua olavo, nº 2">
         </div>
+
         <div class="form-group">
             <label for="CNPJ">CNPJ</label>
             <input type="text" class="form-control" name="cnpj" id="CNPJ" placeholder="CNPJ">
+        </div>
+
+        <div class="form-group">
+            <label for="CPF">CPF</label>
+            <input type="text" class="form-control" name="cpf" id="cpf" placeholder="cpf">
         </div>
 
         <div class="form-row">
@@ -55,7 +61,11 @@
                 <label for="CEP">CEP</label>
                 <input type="text" class="form-control" name="cep" id="CEP">
             </div>
+            <div class="form-group">
+                <label for="nome">Observação</label>
+                <input type="text" class="form-control" name="obs" id="obs">
+            </div>
         </div>
-        <button class="btn btn-primary" type="submit">Adicionar</button>
+        <button class="btn btn-primary" type="submit">Salvar</button>
     </form>
 @endsection

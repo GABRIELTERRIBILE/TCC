@@ -27,3 +27,7 @@ Route::get('/fornecedores', [App\Http\Controllers\FornecedoresController::class,
 Route::get('/fornecedores/criar',[App\Http\Controllers\FornecedoresController::class, 'create']);
 Route::post('/fornecedores/criar', [App\Http\Controllers\FornecedoresController::class, 'store']);
 Route::delete('/fornecedores/{id}',[App\Http\Controllers\FornecedoresController::class, 'destroy']);
+Route::get('/clientes', [App\Http\Controllers\ClientesController::class, 'index'])->name('clientes');
+Route::get('/clientes/criar',[App\Http\Controllers\ClientesController::class, 'create']);
+Route::post('/clientes/criar', [App\Http\Controllers\ClientesController::class, 'store']);
+Route::delete('/clientes/{id}',[App\Http\Controllers\ClientesController::class, 'destroy']);
