@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('home')
 @section('cabecalho')
     Adicionar Cliente
 @endsection
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <label for="Endereço">Endereço</label>
-            <input type="text" class="form-control" name="endereco" id="Endereco" placeholder="Rua olavo, nº 2">
+            <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua olavo, nº 2">
         </div>
 
         <div class="form-group">
@@ -51,11 +51,11 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="Cidade">Cidade</label>
-                <input type="text" class="form-control" name="cidade" id="inputCity">
+                <input type="text" class="form-control" name="cidades" id="inputCity">
             </div>
             <div class="form-group col-md-4">
                 <label for="Estado">Estado</label>
-                <input name="estado" id="Estado" class="form-control">
+                <input name="estados" id="estados" class="form-control">
             </div>
             <div class="form-group col-md-2">
                 <label for="CEP">CEP</label>

@@ -15,8 +15,9 @@ class clientes extends Model
         'telefone',
         'endereco',
         'cnpj',
-        'cidade',
-        'estado',
+        'cpf',
+        'cidades',
+        'estados',
         'cep',
         'obs',
     ];

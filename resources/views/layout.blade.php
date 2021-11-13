@@ -1,21 +1,68 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Controle de Fornecedores</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1>@yield('cabecalho')</h1>
-        </div>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, #02569a, #001a30);
+        }
+        div{
+            background-color: rgb(0, 26, 48);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 10px;
+            color: #f8f6f6;
+        }
 
-        @yield('conteudo')
-    </div>
-</body>
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            border-radius: 12px;
+
+        }
+        button{
+            background-color: #ffbd00;
+            border: none;
+            color: #001a30;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 10px;
+
+            cursor: pointer;
+        }
+        a{
+            background-color: #ffbd00;
+            border: none;
+            color: #001a30;
+            float: right;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 10px;
+
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #c7dc06;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
 </html>

@@ -21,8 +21,8 @@ class CriarTabelaClientes extends Migration
             $table->string('endereco');
             $table->string('cnpj');
             $table->string('cpf');
-            $table->string('cidade');
-            $table->string('estado');
+            $table->string('cidades');
+            $table->string('estados');
             $table->string('cep');
             $table->string('obs');
         });

@@ -1,19 +1,10 @@
-@extends('layout')
+@extends('home')
 @section('cabecalho')
     Adicionar Fornecedores
 @endsection
 
 @section('conteudo')
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    @include('erros', ['errors'=> $errors])
 
     <form action="/fornecedores/criar" method="post">
         @csrf

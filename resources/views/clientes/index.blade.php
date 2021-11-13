@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('home')
 @section('cabecalho')
     Clientes
 @endsection
@@ -16,7 +16,11 @@
         @foreach($clientes as $clientes)
             <li class="list-group-item d-flex justify-content-between align-content-lg-center">
                 {{ $clientes->nome }}
-                <form method="post" action="/fornecedores/{{ $clientes->id }}"
+                <span class="d-flex">
+                    <a  href="/clientes/{{$clientes->id}}/edit"  class="btn btn-info btn-sm mr-1">
+                        <i class="far fa-edit"></i>
+                    </a>
+                <form method="post" action="/clientes/{{ $clientes->id }}"
                       onsubmit="return confirm('Tem certeza que deseja remover {{ addslashes( $clientes->nome )}}?')">
                     @csrf
                     @method('DELETE')

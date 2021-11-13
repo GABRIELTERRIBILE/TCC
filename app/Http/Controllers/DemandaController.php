@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Demanda;
+use App\Demanda;
 use Illuminate\Http\Request;
 use mysql_xdevapi\Exception;
 
@@ -15,7 +15,7 @@ class DemandaController extends Controller
      */
     public function index()
     {
-        return view('Demanda');
+        return view('demandas');
     }
 
     /**
@@ -38,7 +38,7 @@ class DemandaController extends Controller
     {
         try {
             $data = $request->all();
-            demandas::create($data);
+            demanda::create($data);
         }catch (Exception $error){
             return $error;
         }

@@ -20,8 +20,8 @@ class CriarTabelaFornecedores extends Migration
             $table->string('telefone');
             $table->string('endereco');
             $table->string('cnpj');
-            $table->string('cidades');
-            $table->string('estados');
+            $table->string('cidade');
+            $table->string('estado');
             $table->string('cep');
         });
     }
